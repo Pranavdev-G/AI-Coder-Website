@@ -1,0 +1,1274 @@
+Build a **production-quality AI-powered developer platform** called **“AI Coder”** using **React.js, Vite, Tailwind CSS, and Framer Motion**.
+
+This is an advanced **AI Code Review, Refactoring, Testing, and Repository Intelligence platform**. It should look and behave like a serious developer product inspired by modern tools such as Cursor, GitHub Copilot, Linear, Vercel, and modern AI IDEs.
+
+Do NOT create a simple landing page or a fake dashboard.
+
+Build a polished, interactive application with realistic workflows, reusable React components, responsive layouts, animations, loading states, mock AI responses, and a clean architecture that can later connect to a real LLM backend.
+
+---
+
+# 1. Product Identity
+
+Product name:
+
+**AI Coder**
+
+Tagline:
+
+**“Understand. Review. Refactor. Ship better code.”**
+
+Short description:
+
+**An intelligent AI coding platform that analyzes source code, detects bugs and vulnerabilities, explains problems, generates refactoring suggestions, creates tests, and understands entire repositories.**
+
+The visual identity should feel:
+
+* Premium
+* Technical
+* Intelligent
+* Minimal
+* Developer-focused
+* Modern
+* Research-oriented
+* Professional
+
+Avoid generic SaaS templates.
+
+---
+
+# 2. Technology Stack
+
+Use:
+
+* React.js
+* Vite
+* JavaScript
+* Tailwind CSS
+* Framer Motion
+* Lucide React
+* Monaco Editor
+* React Router
+* Recharts or another suitable charting library
+
+Use reusable component architecture.
+
+Suggested structure:
+
+```text
+src/
+├── components/
+│   ├── layout/
+│   ├── navigation/
+│   ├── editor/
+│   ├── analysis/
+│   ├── dashboard/
+│   ├── repository/
+│   ├── refactoring/
+│   ├── testing/
+│   ├── assistant/
+│   └── common/
+│
+├── pages/
+│   ├── Landing.jsx
+│   ├── Dashboard.jsx
+│   ├── CodeReview.jsx
+│   ├── Refactor.jsx
+│   ├── Repository.jsx
+│   ├── Security.jsx
+│   ├── Testing.jsx
+│   ├── Analytics.jsx
+│   ├── History.jsx
+│   └── Settings.jsx
+│
+├── services/
+│   ├── aiService.js
+│   ├── analysisService.js
+│   └── repositoryService.js
+│
+├── data/
+│   └── demoData.js
+│
+├── hooks/
+├── utils/
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+---
+
+# 3. Global UI / UX Direction
+
+Use a **dark-first developer interface**.
+
+Primary visual language:
+
+* Near-black / deep navy background
+* Dark charcoal panels
+* Subtle blue/purple gradients
+* White primary text
+* Muted gray secondary text
+* Cyan/blue/purple accents
+* Thin borders
+* Soft shadows
+* Subtle glass effects
+* Large whitespace
+* Clean typography
+
+Do not overuse gradients.
+
+Do not make every card glow.
+
+Do not use excessive rounded cards.
+
+The interface should feel like a professional engineering tool rather than a gaming website.
+
+---
+
+# 4. Framer Motion
+
+Use **Framer Motion extensively but intelligently**.
+
+Animations should improve UX rather than distract from the product.
+
+Implement:
+
+### Page transitions
+
+Use:
+
+* fade
+* slide
+* scale
+
+for page changes.
+
+### Sidebar
+
+Animate:
+
+* expand/collapse
+* active navigation indicator
+* hover states
+
+### Dashboard
+
+Animate metric cards when entering the page.
+
+### Code analysis
+
+When the user clicks:
+
+**Analyze Code**
+
+show a sophisticated analysis sequence:
+
+```text
+Preparing code...
+↓
+Parsing syntax...
+↓
+Running static analysis...
+↓
+Checking security...
+↓
+Analyzing performance...
+↓
+Consulting AI reasoning engine...
+↓
+Generating recommendations...
+↓
+Finalizing report...
+```
+
+Use Framer Motion transitions between these states.
+
+### Issue cards
+
+Reveal issues sequentially using staggered animations.
+
+### Score
+
+Animate the quality score from 0 to the final score.
+
+### Diff viewer
+
+Animate changed lines appearing.
+
+### AI assistant
+
+Animate messages naturally.
+
+Avoid excessive bounce animations.
+
+---
+
+# 5. Landing Page
+
+Create an impressive landing page.
+
+Hero:
+
+```text
+AI CODER
+
+Understand.
+Review.
+Refactor.
+Ship better code.
+```
+
+Subtitle:
+
+“An intelligent code engineering platform powered by AI, static analysis, and repository-level reasoning.”
+
+Buttons:
+
+**Start Coding**
+
+**Explore Demo**
+
+Hero visual:
+
+Create a large interactive code editor mockup showing:
+
+```python
+def calculate_total(items):
+    total = 0
+
+    for i in range(len(items)):
+        total += items[i].price
+
+    return total
+```
+
+Beside it show AI analysis:
+
+```text
+AI REVIEW
+
+⚡ Performance
+Potential unnecessary indexing
+
+Suggested:
+Use direct iteration.
+
+Complexity:
+O(n)
+
+Confidence:
+97%
+```
+
+Animate the editor and AI analysis panel using Framer Motion.
+
+---
+
+# 6. Landing Page Sections
+
+Include:
+
+## Intelligent Code Analysis
+
+Explain:
+
+* Bug detection
+* Security analysis
+* Performance analysis
+* Code smells
+* Complexity analysis
+
+## Automated Refactoring
+
+Show before/after code.
+
+## Repository Intelligence
+
+Show a repository dependency graph.
+
+## AI Testing
+
+Show generated unit tests.
+
+## Security
+
+Show vulnerability detection.
+
+## How It Works
+
+```text
+Write / Upload Code
+        ↓
+Static Analysis
+        ↓
+AI Reasoning
+        ↓
+Issue Detection
+        ↓
+Refactoring
+        ↓
+Testing
+        ↓
+Ship
+```
+
+Animate each step on scroll.
+
+---
+
+# 7. Application Shell
+
+After entering the application, create a professional IDE-style interface.
+
+Left sidebar:
+
+```text
+AI CODER
+
+⌂ Dashboard
+
+⌘ Code Review
+
+↻ Refactor
+
+◈ Repository
+
+🛡 Security
+
+🧪 Testing
+
+◉ AI Assistant
+
+◫ Analytics
+
+◷ History
+
+⚙ Settings
+```
+
+Bottom:
+
+* User profile
+* Theme toggle
+* AI model selector
+
+The sidebar should support collapsed mode.
+
+---
+
+# 8. Dashboard
+
+Create a developer dashboard.
+
+Header:
+
+```text
+Good evening, Developer.
+
+Your codebase health is looking strong.
+```
+
+Primary button:
+
+**+ New Code Review**
+
+Metrics:
+
+```text
+Reviews
+1,248
+
+Issues Detected
+3,482
+
+Security Issues
+127
+
+Refactorings
+894
+```
+
+Animate numbers on page load.
+
+Add:
+
+### Code Health
+
+```text
+Overall        87
+Security       92
+Performance    81
+Maintainability 89
+Readability    91
+Testing        78
+```
+
+Use animated charts.
+
+---
+
+# 9. Code Review Workspace
+
+This is the most important screen.
+
+Create an IDE-style layout.
+
+### Header
+
+```text
+Code Review
+
+Python
+main.py
+
+[Analyze] [Refactor] [Generate Tests]
+```
+
+### Main area
+
+Left:
+
+**Monaco Editor**
+
+Right:
+
+**AI Review Panel**
+
+Use a split-screen layout.
+
+AI Review panel:
+
+```text
+CODE HEALTH
+87 / 100
+
+Summary
+Your code is functional but contains
+several performance and maintainability
+issues.
+
+Issues
+
+HIGH
+Inefficient nested iteration
+Line 24
+
+MEDIUM
+Repeated database query
+Line 41
+
+LOW
+Variable naming
+Line 53
+```
+
+---
+
+# 10. Issue Card
+
+Each issue must contain:
+
+* Severity
+* Category
+* Line number
+* Title
+* Explanation
+* Impact
+* Recommendation
+* Confidence
+
+Example:
+
+```text
+HIGH
+Performance
+
+Line 24
+
+Inefficient Nested Iteration
+
+The current implementation performs
+repeated searches inside a loop.
+
+Complexity
+O(n²)
+
+Suggested
+O(n)
+
+[View Fix]
+```
+
+Animate issue cards sequentially.
+
+---
+
+# 11. AI Refactoring Page
+
+Create a dedicated page:
+
+```text
+AI REFACTOR
+
+Original Code          Refactored Code
+──────────────         ───────────────
+
+Code                   Improved Code
+```
+
+Use a proper diff viewer.
+
+Show:
+
+```text
+Changes
++ Improved readability
++ Reduced complexity
++ Removed duplication
++ Improved maintainability
+```
+
+Buttons:
+
+* Apply Changes
+* Copy
+* Download
+* Generate Again
+
+Add:
+
+**Run Tests Before Applying**
+
+---
+
+# 12. Refactoring Validation
+
+Implement a visual workflow:
+
+```text
+Generate Refactor
+       ↓
+Run Static Analysis
+       ↓
+Generate Tests
+       ↓
+Run Tests
+       ↓
+Validation
+       ↓
+Apply Patch
+```
+
+Show:
+
+```text
+✓ Syntax valid
+✓ Static analysis passed
+✓ 14/14 tests passed
+✓ Complexity reduced
+✓ Security unchanged
+```
+
+---
+
+# 13. Security Center
+
+Create a security dashboard.
+
+Show:
+
+```text
+SECURITY SCORE
+
+92 / 100
+```
+
+Categories:
+
+* Critical
+* High
+* Medium
+* Low
+
+Findings:
+
+```text
+CRITICAL
+SQL Injection
+
+CWE-89
+
+Line 42
+
+User input is directly concatenated
+into an SQL query.
+
+[View Vulnerable Code]
+[Generate Fix]
+```
+
+Also display:
+
+* OWASP category
+* CWE identifier
+* Attack explanation
+* Recommended fix
+
+---
+
+# 14. Repository Intelligence
+
+Allow the user to simulate connecting a GitHub repository.
+
+Screen:
+
+```text
+Repository Intelligence
+
+Connect Repository
+
+[ GitHub Repository ]
+
+Repository:
+ai-coder-demo
+
+Files:
+147
+
+Lines:
+38,421
+
+Languages:
+Python
+JavaScript
+TypeScript
+SQL
+```
+
+Show:
+
+```text
+Repository Health
+84 / 100
+```
+
+---
+
+# 15. Dependency Graph
+
+Create a beautiful interactive dependency graph.
+
+Example:
+
+```text
+                 App
+              /       \
+             /         \
+        AuthService   APIService
+           |              |
+           ↓              ↓
+       UserModel      Database
+```
+
+Nodes should be animated.
+
+Clicking a node should display:
+
+* File
+* Dependencies
+* Dependents
+* Complexity
+* Issues
+* Security findings
+
+---
+
+# 16. Repository AI Assistant
+
+Create an AI chat interface.
+
+Title:
+
+**Ask AI about your codebase**
+
+Example messages:
+
+User:
+
+> Why is authentication failing?
+
+AI:
+
+> The issue appears to originate from `AuthService.js`.
+
+Then show:
+
+```text
+AuthService.js
+Line 84
+```
+
+User:
+
+> Which functions have the highest complexity?
+
+AI:
+
+```text
+1. processTransaction() — 17
+2. validateRequest() — 14
+3. generateReport() — 12
+```
+
+The assistant should appear repository-aware.
+
+---
+
+# 17. AI Test Generator
+
+Create a testing page.
+
+Input:
+
+```text
+Select Function
+```
+
+Then AI generates:
+
+```javascript
+describe("calculateTotal", () => {
+
+  test("returns correct total", () => {
+    ...
+  });
+
+  test("handles empty array", () => {
+    ...
+  });
+
+  test("handles invalid input", () => {
+    ...
+  });
+
+});
+```
+
+Show:
+
+```text
+Generated Tests: 8
+Passed: 8
+Coverage: 94%
+```
+
+Add:
+
+**Run Tests**
+
+button with animated execution.
+
+---
+
+# 18. Analytics
+
+Create an AI engineering analytics dashboard.
+
+Metrics:
+
+* Reviews completed
+* Issues detected
+* Issues resolved
+* Security vulnerabilities
+* Refactorings
+* Tests generated
+* Test coverage
+* Average review latency
+* AI token usage
+* False-positive feedback
+
+Charts:
+
+* Code quality over time
+* Issues by severity
+* Security findings
+* Language distribution
+* Review activity
+* Refactoring success rate
+
+---
+
+# 19. AI Model Panel
+
+Add a model selector.
+
+Example:
+
+```text
+AI MODEL
+
+● Balanced
+  High quality + moderate latency
+
+○ Fast
+  Lower latency
+
+○ Deep Analysis
+  Maximum reasoning
+```
+
+Also show:
+
+```text
+Model Version
+Prompt Version
+Analysis Mode
+Temperature
+```
+
+Do not expose actual API keys.
+
+---
+
+# 20. AI Analysis Pipeline UI
+
+Create a beautiful visual pipeline:
+
+```text
+CODE
+ ↓
+Parser
+ ↓
+AST Analyzer
+ ↓
+Static Analyzer
+ ↓
+Security Agent
+ ↓
+Performance Agent
+ ↓
+LLM Reasoning
+ ↓
+Review Judge
+ ↓
+Refactoring Engine
+ ↓
+Test Generator
+ ↓
+Validation
+ ↓
+REPORT
+```
+
+Use animated connectors and active-state animations.
+
+---
+
+# 21. AI Agent Architecture
+
+Represent the internal architecture visually.
+
+Agents:
+
+```text
+Code Quality Agent
+Security Agent
+Performance Agent
+Bug Detection Agent
+Refactoring Agent
+Testing Agent
+Documentation Agent
+```
+
+All communicate with:
+
+**AI Review Orchestrator**
+
+Then:
+
+**Review Judge**
+
+Use Framer Motion to animate communication paths.
+
+---
+
+# 22. Review History
+
+Create a searchable history.
+
+Each record:
+
+```text
+main.py
+Python
+
+Score: 87
+
+Issues: 12
+Security: 2
+Refactorings: 5
+
+2 hours ago
+
+[Open Review]
+```
+
+Filters:
+
+* Language
+* Score
+* Severity
+* Date
+
+---
+
+# 23. Settings
+
+Create:
+
+### General
+
+* Theme
+* Default language
+* Editor font size
+* Tab size
+
+### AI
+
+* Model
+* Analysis depth
+* Temperature
+* Auto-refactoring
+
+### Security
+
+* Enable security scans
+* CWE analysis
+* OWASP analysis
+
+### Testing
+
+* Generate tests automatically
+* Run validation before applying patches
+
+---
+
+# 24. Mock AI Service
+
+Implement realistic demo functionality.
+
+Create:
+
+```text
+services/aiService.js
+```
+
+Functions:
+
+```javascript
+analyzeCode()
+refactorCode()
+generateTests()
+analyzeSecurity()
+analyzeRepository()
+chatWithRepository()
+```
+
+Use realistic structured JSON responses.
+
+Example:
+
+```javascript
+{
+  score: 87,
+
+  metrics: {
+    readability: 91,
+    maintainability: 89,
+    security: 92,
+    performance: 81,
+    complexity: 78
+  },
+
+  issues: [],
+
+  refactoringSuggestions: [],
+
+  securityFindings: [],
+
+  generatedTests: []
+}
+```
+
+Keep the service layer completely separate from UI components.
+
+Design it so that a real backend/LLM API can later replace the mock service without changing the frontend.
+
+---
+
+# 25. Loading Experience
+
+The AI analysis must feel intelligent.
+
+When clicking Analyze:
+
+Display a full analysis sequence:
+
+```text
+✓ Code received
+
+✓ Parsing AST
+
+✓ Running static analysis
+
+✓ Detecting security vulnerabilities
+
+✓ Measuring complexity
+
+◉ AI reasoning...
+
+○ Generating recommendations
+
+○ Validating suggestions
+```
+
+Use Framer Motion animations.
+
+---
+
+# 26. Empty States
+
+Create polished empty states.
+
+Example:
+
+```text
+No code loaded.
+
+Upload a file or paste your code
+to start an AI review.
+
+[Start Review]
+```
+
+Never show blank screens.
+
+---
+
+# 27. Error States
+
+Handle:
+
+* AI service unavailable
+* Invalid code
+* Unsupported language
+* Repository unavailable
+* Analysis timeout
+* Network error
+
+Use useful error messages and retry buttons.
+
+---
+
+# 28. Responsive Design
+
+The application must work on:
+
+* Desktop
+* Laptop
+* Tablet
+* Mobile
+
+Desktop should provide the full IDE experience.
+
+Mobile:
+
+* Collapsible sidebar
+* Stacked editor/review panels
+* Bottom navigation where appropriate
+* Horizontally scrollable code/diff views
+
+---
+
+# 29. Accessibility
+
+Implement:
+
+* Keyboard navigation
+* Focus states
+* ARIA labels
+* Proper contrast
+* Accessible buttons
+* Tooltips
+* Reduced-motion support
+
+Respect:
+
+`prefers-reduced-motion`
+
+and reduce Framer Motion animations when the user requests reduced motion.
+
+---
+
+# 30. Micro-interactions
+
+Add subtle interactions:
+
+* Button hover
+* Active navigation indicator
+* Copy confirmation
+* Successful analysis checkmark
+* Animated progress
+* Code selection
+* Issue highlighting
+* Tooltip transitions
+* Toast notifications
+
+Keep animations subtle and professional.
+
+---
+
+# 31. Important Design Rule
+
+Do NOT make every section a floating glass card.
+
+Use:
+
+* Panels
+* Dividers
+* Grids
+* Full-width sections
+* Code-editor surfaces
+* Tables
+* Charts
+* Cards only where useful
+
+The application should resemble a professional IDE/developer platform.
+
+---
+
+# 32. Sample Demo Data
+
+Provide realistic demo data so the application looks complete immediately.
+
+Include:
+
+### Python
+
+`transaction_service.py`
+
+### JavaScript
+
+`authService.js`
+
+### Java
+
+`PaymentService.java`
+
+### SQL
+
+`customer_queries.sql`
+
+Each should have realistic AI findings.
+
+---
+
+# 33. Advanced Visual Details
+
+Add subtle:
+
+* Grid background
+* Moving gradient
+* Noise texture
+* Code-line highlights
+* Animated particles only in hero section
+* Glow around active AI analysis
+* Gradient text for major headings
+
+Do NOT use excessive particle effects.
+
+The hero should feel premium but the application itself should remain focused and functional.
+
+---
+
+# 34. Final User Flow
+
+The complete workflow should be:
+
+```text
+Landing Page
+     ↓
+Start Coding
+     ↓
+Dashboard
+     ↓
+New Code Review
+     ↓
+Paste / Upload Code
+     ↓
+Select Language
+     ↓
+Analyze
+     ↓
+Static Analysis
+     ↓
+AI Analysis
+     ↓
+Review Results
+     ↓
+View Issues
+     ↓
+Generate Refactoring
+     ↓
+Generate Tests
+     ↓
+Run Validation
+     ↓
+Apply Refactoring
+     ↓
+View Updated Code
+```
+
+Also support:
+
+```text
+Connect GitHub
+      ↓
+Repository Analysis
+      ↓
+Dependency Graph
+      ↓
+Security Scan
+      ↓
+AI Repository Assistant
+```
+
+---
+
+# 35. Final Quality Standard
+
+Before finishing:
+
+* Remove all placeholder content.
+* Remove all broken buttons.
+* Fix all console errors.
+* Fix all routing issues.
+* Ensure every major button performs an action.
+* Ensure animations do not cause layout shifts.
+* Ensure responsive layouts work.
+* Ensure loading states work.
+* Ensure error states work.
+* Ensure mock AI responses are realistic.
+* Ensure components are reusable.
+* Ensure code is clean and maintainable.
+* Ensure no API keys are exposed.
+* Ensure the application starts correctly with npm.
+
+The final product should feel like a **real AI-powered developer platform**, not a college dashboard.
+
+The final visual quality should be comparable to a modern developer SaaS product.
+
+Use **Framer Motion throughout the interface for purposeful transitions, orchestration, page transitions, micro-interactions, AI processing states, charts, repository graphs, and code-analysis animations.**
+
+Prioritize **UI/UX quality, usability, performance, and technical credibility** over adding unnecessary visual effects.
